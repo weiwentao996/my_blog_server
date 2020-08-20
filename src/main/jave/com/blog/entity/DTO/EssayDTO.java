@@ -1,8 +1,8 @@
-package com.blog.entity;
+package com.blog.entity.DTO;
 
 import java.util.Date;
 
-public class Essay {
+public class EssayDTO {
     private Long id;
 
     private String essayCode;
@@ -12,12 +12,6 @@ public class Essay {
     private String userId;
 
     private String typeCode;
-
-    private Date createTime;
-
-    private Date modifiedTime;
-
-    private Byte isDelete;
 
     private String context;
 
@@ -61,35 +55,4 @@ public class Essay {
         this.typeCode = typeCode;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getModifiedTime() {
-        return modifiedTime;
-    }
-
-    public void setModifiedTime(Date modifiedTime) {
-        this.modifiedTime = modifiedTime;
-    }
-
-    public Byte getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Byte isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
-    }
 }
