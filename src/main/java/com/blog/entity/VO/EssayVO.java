@@ -19,7 +19,7 @@ public class EssayVO {
     private String context;
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    protected Date createTime;
+    protected Date createdTime;
 
     public Long getId() {
         return id;
@@ -69,11 +69,11 @@ public class EssayVO {
         this.context = context;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getcreatedTime() {
+        return createdTime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setcreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 }

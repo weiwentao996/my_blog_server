@@ -6,18 +6,18 @@ import java.util.Date;
 
 public class BasePO {
 
-    protected Date createTime;
+    protected Date createdTime;
 
     protected Date modifiedTime;
 
     protected Byte isDelete;
 
-    public Date getCreateTime() {
-        return ObjectUtils.isEmpty(createTime) ? new Date() : createTime;
+    public Date getCreatedTime() {
+        return ObjectUtils.isEmpty(createdTime) ? new Date() : createdTime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 
     public Date getModifiedTime() {

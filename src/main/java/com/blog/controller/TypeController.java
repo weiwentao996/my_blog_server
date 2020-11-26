@@ -14,21 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/blog")
 @RestController
 public class TypeController {
-
-    @Autowired
-    private Response response;
     @Autowired
     private TypeService typeService;
-
-
+    
     @PostMapping("insertType")
     public Response insertType(@RequestBody TypeDO type) {
-
         TypeDTO typeDTO = new TypeDTO();
         BeanUtils.copyProperties(type, typeDTO);
         typeService.insertType(typeDTO);
-
-        return new Response();
+        return new Response("成功",Response.ok);
     }
 
 }

@@ -5,16 +5,16 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="type_code" jdbcType="VARCHAR" property="typeCode" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
     <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, type_code, name, create_time, modified_time, is_delete
+    id, type_code, name, created_time, modified_time, is_delete
   </sql>
 
-  <insert id="insertType" parameterMap="BaseResultMap">
+  <insert id="insertType">
      insert into type
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="typeCode != null">
@@ -23,8 +23,8 @@
       <if test="name != null">
         name,
       </if>
-      <if test="createTime != null">
-        create_time,
+      <if test="createdTime != null">
+        created_time,
       </if>
       <if test="modifiedTime != null">
         modified_time,
@@ -40,8 +40,8 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="createdTime != null">
+        #{createdTime,jdbcType=TIMESTAMP},
       </if>
       <if test="modifiedTime != null">
         #{modifiedTime,jdbcType=TIMESTAMP},
